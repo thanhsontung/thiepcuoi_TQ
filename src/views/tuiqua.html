@@ -1,0 +1,711 @@
+<!DOCTYPE html>
+<html lang="vi">
+
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Wedding Invitation</title>
+  <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/css/bootstrap.min.css" rel="stylesheet">
+  <link
+    href="https://fonts.googleapis.com/css2?family=Playfair+Display:ital,wght@0,400;0,600;0,700;1,400&family=Great+Vibes&display=swap"
+    rel="stylesheet">
+</head>
+
+<body>
+  <header class="wedding-header position-relative overflow-hidden">
+    <div class="container-fluid p-0">
+      <!-- Flowers -->
+      <img
+        src="https://png.pngtree.com/png-vector/20230318/ourmid/pngtree-watercolor-leaves-and-flowers-png-image_6653171.png"
+        class="flower-left position-absolute top-0 start-0" alt="flowers">
+      <img
+        src="https://png.pngtree.com/png-vector/20230318/ourmid/pngtree-watercolor-leaves-and-flowers-png-image_6653171.png"
+        class="flower-right position-absolute top-0 end-0" alt="flowers">
+
+      <!-- Content -->
+      <div class="text-center py-4 px-3 position-relative">
+        <div class="invitation-text mb-2">Thiệp Mừng</div>
+        <div class="event-title mb-4">Lễ Vu Quy</div>
+
+        <div class="d-flex flex-wrap justify-content-center align-items-center gap-3">
+          <!-- Bride -->
+          <div class="bride-section text-center">
+            <div class="bride-name">Sơn Thị Bích</div>
+            <div class="heart-icon">♥</div>
+            <div class="bride-highlight">Trâm</div>
+          </div>
+
+          <!-- Bouquet -->
+          <div class="bouquet-icon">💐</div>
+
+          <!-- Groom -->
+          <div class="groom-section text-center">
+            <div class="groom-name">Pan</div>
+            <div class="groom-highlight">Guihuang</div>
+          </div>
+        </div>
+
+        <!-- Bottom line -->
+        <div class="decorative-line mt-4 mx-auto"></div>
+      </div>
+    </div>
+  </header>
+
+  <!-- album -->
+  <section class="wedding_album">
+    <div class="album_header">
+      <h2>OUR<br>MOMENTS <span>of love</span></h2>
+    </div>
+
+    <div class="album_container">
+      <!-- left_child Column - 54% -->
+      <div class="album_left_child">
+        <div class="photo_item" data-direction="left_child">
+          <img src="https://res.cloudinary.com/devdnfoyh/image/upload/v1762071610/34341376146256425053_sblzam.jpg"
+            alt="Wedding 1">
+        </div>
+        <div class="photo_item" data-direction="bottom_child">
+          <img src="https://res.cloudinary.com/devdnfoyh/image/upload/v1762071609/9f0d094ed8eb55b50cfa14_ylmyvj.jpg"
+            alt="Wedding 2">
+        </div>
+        <div class="photo_item" data-direction="left_child">
+          <img src="https://res.cloudinary.com/devdnfoyh/image/upload/v1762071610/ba57990f48aac5f49cbb12_bv469p.jpg"
+            alt="Wedding 3">
+        </div>
+      </div>
+
+      <!-- right_child Column - 46% -->
+      <div class="album_right_child">
+        <div class="photo_item" data-direction="right_child">
+          <img src="https://res.cloudinary.com/devdnfoyh/image/upload/v1762071611/dfcf2047f1e27cbc25f37_nwykbw.jpg"
+            alt="Wedding 4">
+        </div>
+        <div class="photo_item" data-direction="top">
+          <img src="https://res.cloudinary.com/devdnfoyh/image/upload/v1762071610/b88057e786420b1c525310_uykxg2.jpg"
+            alt="Wedding 5">
+        </div>
+        <div class="photo_item" data-direction="right_child">
+          <img src="https://res.cloudinary.com/devdnfoyh/image/upload/v1762071610/43313903013787524732_dymgb1.jpg"
+            alt="Wedding 6">
+        </div>
+        <div class="photo_item" data-direction="bottom_child">
+          <img src="https://res.cloudinary.com/devdnfoyh/image/upload/v1762071611/efa97aeaab4f26117f5e15_hd5agp.jpg"
+            alt="Wedding 7">
+        </div>
+      </div>
+    </div>
+
+    <div class="album_footer">
+      <button class="see_album_btn" onclick="openFullAlbum()">SEE ALBUM</button>
+      <div class="click_music">
+        CLICK MUSIC
+        <span class="music_notes">♪</span>
+      </div>
+    </div>
+  </section>
+
+  <style>
+    .wedding-header {
+      max-width: 510px;
+      margin: 0 auto;
+      background: linear-gradient(180deg, #fef8f5 0%, #fef3ed 100%);
+      box-shadow: 0 4px 15px rgba(0, 0, 0, 0.1);
+      font-family: 'Playfair Display', serif;
+    }
+
+    .flower-left,
+    .flower-right {
+      width: 150px;
+      height: 150px;
+      opacity: 0;
+      animation: flowerFadeIn 1s ease forwards;
+      filter: hue-rotate(20deg) saturate(0.8);
+    }
+
+    .flower-left {
+      left: -20px !important;
+      animation-delay: 0.3s;
+    }
+
+    .flower-right {
+      right: -20px !important;
+      transform: scaleX(-1);
+      animation-delay: 0.5s;
+    }
+
+    .invitation-text {
+      font-size: 1.2rem;
+      color: #c41e3a;
+      font-weight: 600;
+      letter-spacing: 3px;
+      opacity: 0;
+      animation: fadeInDown 0.8s ease forwards 0.2s;
+    }
+
+    .event-title {
+      font-family: 'Great Vibes', cursive;
+      font-size: 2.5rem;
+      color: #c41e3a;
+      opacity: 0;
+      animation: fadeInScale 1s ease forwards 0.4s;
+    }
+
+    .bride-section,
+    .groom-section {
+      opacity: 0;
+    }
+
+    .bride-section {
+      animation: slideInLeft 0.8s ease forwards 0.6s;
+    }
+
+    .groom-section {
+      animation: slideInRight 0.8s ease forwards 0.8s;
+    }
+
+    .bride-name,
+    .groom-name {
+      font-size: 1.1rem;
+      color: #c41e3a;
+      font-weight: 600;
+      letter-spacing: 1px;
+    }
+
+    .bride-highlight,
+    .groom-highlight {
+      font-size: 1.3rem;
+      color: #c41e3a;
+      font-weight: 700;
+      letter-spacing: 1px;
+    }
+
+    .heart-icon {
+      font-size: 1rem;
+      color: #ff6b9d;
+      margin-top: 0.2rem;
+    }
+
+    .bouquet-icon {
+      font-size: 2rem;
+      opacity: 0;
+      animation: bounceIn 1s ease forwards 1s;
+    }
+
+    .decorative-line {
+      width: 100%;
+      height: 40px;
+      background: linear-gradient(90deg, transparent, #d4a5a5 20%, #d4a5a5 80%, transparent);
+      position: relative;
+      opacity: 0;
+      animation: fadeInUp 0.8s ease forwards 1.2s;
+    }
+
+    .decorative-line::before {
+      content: '♦';
+      position: absolute;
+      left: 50%;
+      top: 50%;
+      transform: translate(-50%, -50%);
+      color: #c41e3a;
+      font-size: 1.5rem;
+    }
+
+    @keyframes flowerFadeIn {
+      from {
+        opacity: 0;
+        transform: scale(0.8) translateY(-20px);
+      }
+
+      to {
+        opacity: 0.9;
+        transform: scale(1) translateY(0);
+      }
+    }
+
+    @keyframes fadeInDown {
+      from {
+        opacity: 0;
+        transform: translateY(-20px);
+      }
+
+      to {
+        opacity: 1;
+        transform: translateY(0);
+      }
+    }
+
+    @keyframes fadeInScale {
+      from {
+        opacity: 0;
+        transform: scale(0.8);
+      }
+
+      to {
+        opacity: 1;
+        transform: scale(1);
+      }
+    }
+
+    @keyframes slideInLeft {
+      from {
+        opacity: 0;
+        transform: translateX(-30px);
+      }
+
+      to {
+        opacity: 1;
+        transform: translateX(0);
+      }
+    }
+
+    @keyframes slideInRight {
+      from {
+        opacity: 0;
+        transform: translateX(30px);
+      }
+
+      to {
+        opacity: 1;
+        transform: translateX(0);
+      }
+    }
+
+    @keyframes bounceIn {
+      0% {
+        opacity: 0;
+        transform: scale(0.3);
+      }
+
+      50% {
+        transform: scale(1.1);
+      }
+
+      100% {
+        opacity: 1;
+        transform: scale(1);
+      }
+    }
+
+    @keyframes fadeInUp {
+      from {
+        opacity: 0;
+        transform: translateY(20px);
+      }
+
+      to {
+        opacity: 1;
+        transform: translateY(0);
+      }
+    }
+
+    @media (max-width: 480px) {
+
+      .flower-left,
+      .flower-right {
+        width: 120px;
+        height: 120px;
+      }
+
+      .flower-left {
+        left: -30px !important;
+      }
+
+      .flower-right {
+        right: -30px !important;
+      }
+
+      .invitation-text {
+        font-size: 1rem;
+        letter-spacing: 2px;
+      }
+
+      .event-title {
+        font-size: 2rem;
+      }
+
+      .bride-name,
+      .groom-name {
+        font-size: 1rem;
+      }
+
+      .bride-highlight,
+      .groom-highlight {
+        font-size: 1.15rem;
+      }
+
+      .bouquet-icon {
+        font-size: 1.5rem;
+      }
+
+      .decorative-line {
+        height: 30px;
+      }
+
+      .decorative-line::before {
+        font-size: 1.2rem;
+      }
+    }
+
+
+    /* css album */
+    /* Main Container */
+    .wedding_album {
+      max-width: 280px;
+      width: 100%;
+      margin: 0 auto 50px;
+      background-color: #7a1f1f;
+      color: white;
+      font-family: "Playfair Display", serif;
+      box-shadow: 0 8px 20px rgba(0, 0, 0, 0.3);
+      overflow: hidden;
+    }
+
+    /* Header */
+    .album_header {
+      padding: 1rem 1rem 0.8rem;
+      background-color: #7a1f1f;
+      text-align: left_child;
+    }
+
+    .album_header h2 {
+      font-size: 1rem;
+      font-weight: 700;
+      margin: 0;
+      line-height: 1.1;
+      letter-spacing: 2px;
+      text-transform: uppercase;
+    }
+
+    .album_header span {
+      font-style: italic;
+      font-size: 1rem;
+      font-weight: 400;
+      margin-left: 3px;
+      text-transform: lowercase;
+      letter-spacing: 0.5px;
+    }
+
+    /* Two Column Layout */
+    .album_container {
+      display: flex;
+      gap: 2px;
+      padding: 0;
+      background-color: #7a1f1f;
+    }
+
+    .album_left_child {
+      width: 54%;
+      display: flex;
+      flex-direction: column;
+      gap: 2px;
+    }
+
+    .album_right_child {
+      width: 46%;
+      display: flex;
+      flex-direction: column;
+      gap: 2px;
+    }
+
+    /* Photo Items */
+    .photo_item {
+      position: relative;
+      overflow: hidden;
+      background-color: #5a1515;
+      opacity: 0;
+    }
+
+    /* left_child column - 3 photos với tỷ lệ giống mẫu */
+    .album_left_child .photo_item:nth-child(1) {
+      height: 220px;
+      /* Ảnh đầu cao nhất */
+    }
+
+    .album_left_child .photo_item:nth-child(2) {
+      height: 200px;
+      /* Ảnh giữa */
+    }
+
+    .album_left_child .photo_item:nth-child(3) {
+      height: 220px;
+      /* Ảnh cuối cao nhất */
+    }
+
+    /* right_child column - 4 photos nhỏ hơn và đều nhau */
+    .album_right_child .photo_item {
+      height: 160px;
+      /* 4 ảnh đều nhau */
+    }
+
+    /* Animation from 4 directions */
+    .photo_item[data-direction="left_child"] {
+      animation: slideFromleft_child 0.8s ease forwards;
+    }
+
+    .photo_item[data-direction="right_child"] {
+      animation: slideFromright_child 0.8s ease forwards;
+    }
+
+    .photo_item[data-direction="top"] {
+      animation: slideFromTop 0.8s ease forwards;
+    }
+
+    .photo_item[data-direction="bottom_child"] {
+      animation: slideFrombottom_child 0.8s ease forwards;
+    }
+
+    /* Staggered delays */
+    .album_left_child .photo_item:nth-child(1) {
+      animation-delay: 0.2s;
+    }
+
+    .album_left_child .photo_item:nth-child(2) {
+      animation-delay: 0.5s;
+    }
+
+    .album_left_child .photo_item:nth-child(3) {
+      animation-delay: 0.8s;
+    }
+
+    .album_right_child .photo_item:nth-child(1) {
+      animation-delay: 0.3s;
+    }
+
+    .album_right_child .photo_item:nth-child(2) {
+      animation-delay: 0.6s;
+    }
+
+    .album_right_child .photo_item:nth-child(3) {
+      animation-delay: 0.9s;
+    }
+
+    .album_right_child .photo_item:nth-child(4) {
+      animation-delay: 1.2s;
+    }
+
+    /* Keyframe Animations */
+    @keyframes slideFromleft_child {
+      from {
+        opacity: 0;
+        transform: translateX(-50px) scale(0.9);
+      }
+
+      to {
+        opacity: 1;
+        transform: translateX(0) scale(1);
+      }
+    }
+
+    @keyframes slideFromright_child {
+      from {
+        opacity: 0;
+        transform: translateX(50px) scale(0.9);
+      }
+
+      to {
+        opacity: 1;
+        transform: translateX(0) scale(1);
+      }
+    }
+
+    @keyframes slideFromTop {
+      from {
+        opacity: 0;
+        transform: translateY(-50px) scale(0.9);
+      }
+
+      to {
+        opacity: 1;
+        transform: translateY(0) scale(1);
+      }
+    }
+
+    @keyframes slideFrombottom_child {
+      from {
+        opacity: 0;
+        transform: translateY(50px) scale(0.9);
+      }
+
+      to {
+        opacity: 1;
+        transform: translateY(0) scale(1);
+      }
+    }
+
+    /* Image Styling */
+    .photo_item img {
+      width: 100%;
+      height: 100%;
+      display: block;
+      object-fit: cover;
+      object-position: center;
+      transition: transform 0.5s cubic-bezier(0.34, 1.56, 0.64, 1);
+      cursor: pointer;
+    }
+
+    /* Hover Effects */
+    .photo_item:hover img {
+      transform: scale(1.1);
+    }
+
+    .photo_item:hover {
+      z-index: 10;
+      box-shadow: 0 5px 20px rgba(0, 0, 0, 0.6);
+    }
+
+    /* Footer */
+    .album_footer {
+      padding: 0.8rem 0;
+      background-color: #7a1f1f;
+      text-align: center;
+      position: relative;
+    }
+
+    .see_album_btn {
+      background: transparent;
+      border: 2px solid #fff;
+      color: #fff;
+      padding: 0.5rem 1.5rem;
+      font-size: 0.7rem;
+      letter-spacing: 2px;
+      cursor: pointer;
+      transition: all 0.3s ease;
+      border-radius: 0;
+      text-transform: uppercase;
+      font-weight: 600;
+      font-family: "Playfair Display", serif;
+    }
+
+    .see_album_btn:hover {
+      background-color: #fff;
+      color: #7a1f1f;
+      transform: translateY(-2px);
+      box-shadow: 0 5px 15px rgba(255, 255, 255, 0.3);
+    }
+
+    .click_music {
+      font-size: 0.6rem;
+      letter-spacing: 2px;
+      margin-top: 0.5rem;
+      opacity: 0.95;
+      font-weight: 500;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      gap: 5px;
+    }
+
+    .music_notes {
+      color: #ff6b6b;
+      font-size: 0.8rem;
+      animation: musicPulse 1.5s ease-in-out infinite;
+    }
+
+    @keyframes musicPulse {
+
+      0%,
+      100% {
+        transform: scale(1);
+        opacity: 1;
+      }
+
+      50% {
+        transform: scale(1.3);
+        opacity: 0.7;
+      }
+    }
+
+    /* ===== RESPONSIVE MOBILE ===== */
+    @media (max-width: 480px) {
+      .wedding_album {
+        max-width: 100%;
+        width: calc(100% - 20px);
+        margin: 0 10px 30px;
+      }
+
+      .album_header {
+        padding: 0.9rem 0.8rem 0.6rem;
+      }
+
+      .album_header h2 {
+        font-size: 0.9rem;
+      }
+
+      .album_header span {
+        font-size: 0.9rem;
+      }
+
+      .album_container {
+        flex-direction: column;
+      }
+
+      .album_left_child,
+      .album_right_child {
+        width: 100%;
+      }
+
+      /* Responsive heights on mobile */
+      .album_left_child .photo_item:nth-child(1) {
+        height: 200px;
+      }
+
+      .album_left_child .photo_item:nth-child(2) {
+        height: 180px;
+      }
+
+      .album_left_child .photo_item:nth-child(3) {
+        height: 200px;
+      }
+
+      .album_right_child .photo_item {
+        height: 150px;
+      }
+
+      .see_album_btn {
+        font-size: 0.65rem;
+        padding: 0.45rem 1.3rem;
+      }
+
+      .click_music {
+        font-size: 0.55rem;
+      }
+
+      .music_notes {
+        font-size: 0.75rem;
+      }
+    }
+
+    @media (min-width: 481px) and (max-width: 768px) {
+      .wedding_album {
+        max-width: 320px;
+      }
+
+      .album_left_child .photo_item:nth-child(1) {
+        height: 210px;
+      }
+
+      .album_left_child .photo_item:nth-child(2) {
+        height: 190px;
+      }
+
+      .album_left_child .photo_item:nth-child(3) {
+        height: 210px;
+      }
+
+      .album_right_child .photo_item {
+        height: 152px;
+      }
+    }
+
+    /* Desktop larger screens */
+    @media (min-width: 769px) {
+      .wedding_album {
+        max-width: 320px;
+      }
+    }
+  </style>
+
+  <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/js/bootstrap.bundle.min.js"></script>
+</body>
+
+</html>
