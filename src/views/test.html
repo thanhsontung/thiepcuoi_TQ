@@ -9,29 +9,52 @@
 
 <body>
     <style>
-        .clock-alert {
-            display: inline-block;
-            font-size: 20px;
-            color: #2c3e50;
-            animation: elegant-blink 2s ease-in-out infinite;
-        }
+.clock-container {
+    display: inline-block;
+    position: relative;
+}
 
-        @keyframes elegant-blink {
+.clock-icon {
+    font-size: 20px;
+    color: #e74c3c;
+    filter: drop-shadow(0 0 8px rgba(231, 76, 60, 0.6));
+}
 
-            0%,
-            100% {
-                opacity: 1;
-                transform: scale(1);
-            }
+.heart {
+    position: absolute;
+    font-size: 12px;
+    color: #e74c3c;
+    animation: fall 2s linear infinite;
+    opacity: 0;
+    top: -10px;
+    left: 50%;
+}
 
-            50% {
-                opacity: 0.4;
-                transform: scale(1.05);
-            }
-        }
-    </style>
+.heart:nth-child(2) { animation-delay: 0.3s; left: 30%; }
+.heart:nth-child(3) { animation-delay: 0.6s; left: 70%; }
+.heart:nth-child(4) { animation-delay: 0.9s; left: 40%; }
+.heart:nth-child(5) { animation-delay: 1.2s; left: 60%; }
 
-    <span class="clock-alert">🕐</span>
+@keyframes fall {
+    0% {
+        transform: translateY(0) rotate(0deg);
+        opacity: 1;
+    }
+    100% {
+        transform: translateY(40px) rotate(360deg);
+        opacity: 0;
+    }
+}
+</style>
+
+<span class="clock-container">
+    <span class="clock-icon">⏱</span>
+    <span class="heart">❤️</span>
+    <span class="heart">❤️</span>
+    <span class="heart">❤️</span>
+    <span class="heart">❤️</span>
+    <span class="heart">❤️</span>
+</span>
 </body>
 
 </html>
