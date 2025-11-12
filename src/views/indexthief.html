@@ -1376,46 +1376,129 @@
         .calendar-day:nth-child(18),
         .calendar-day:nth-child(25),
         .calendar-day:nth-child(33) {
-            animation: slideUpCalendar 0.6s ease-out forwards, 
-                       floatGentle 4s ease-in-out infinite 2s;
+            animation: slideUpCalendar 0.6s ease-out forwards,
+                floatGentle 4s ease-in-out infinite 2s;
         }
 
         /* Staggered animation delays for calendar days */
-        .calendar-day:nth-child(8) { animation-delay: 0.1s; }
-        .calendar-day:nth-child(9) { animation-delay: 0.15s; }
-        .calendar-day:nth-child(10) { animation-delay: 0.2s; }
-        .calendar-day:nth-child(11) { animation-delay: 0.25s; }
-        .calendar-day:nth-child(12) { animation-delay: 0.3s; }
-        .calendar-day:nth-child(13) { animation-delay: 0.35s; }
-        .calendar-day:nth-child(14) { animation-delay: 0.4s; }
-        
-        .calendar-day:nth-child(15) { animation-delay: 0.45s; }
-        .calendar-day:nth-child(16) { animation-delay: 0.5s; }
-        .calendar-day:nth-child(17) { animation-delay: 0.55s; }
-        .calendar-day:nth-child(18) { animation-delay: 0.6s; }
-        .calendar-day:nth-child(19) { animation-delay: 0.65s; }
-        .calendar-day:nth-child(20) { animation-delay: 0.7s; }
-        .calendar-day:nth-child(21) { animation-delay: 0.75s; }
-        
-        .calendar-day:nth-child(22) { animation-delay: 0.8s; }
-        .calendar-day:nth-child(23) { animation-delay: 0.85s; }
-        .calendar-day:nth-child(24) { animation-delay: 0.9s; }
-        .calendar-day:nth-child(25) { animation-delay: 0.95s; }
-        .calendar-day:nth-child(26) { animation-delay: 1.0s; }
-        .calendar-day:nth-child(27) { animation-delay: 1.05s; }
-        .calendar-day:nth-child(28) { animation-delay: 1.1s; }
-        
-        .calendar-day:nth-child(29) { animation-delay: 1.15s; }
-        .calendar-day:nth-child(30) { animation-delay: 1.2s; }
-        .calendar-day:nth-child(31) { animation-delay: 1.25s; }
-        .calendar-day:nth-child(32) { animation-delay: 1.3s; }
-        .calendar-day:nth-child(33) { animation-delay: 1.35s; }
-        .calendar-day:nth-child(34) { animation-delay: 1.4s; }
-        .calendar-day:nth-child(35) { animation-delay: 1.45s; }
-        
-        .calendar-day:nth-child(36) { animation-delay: 1.5s; }
-        .calendar-day:nth-child(37) { 
-            animation-delay: 1.55s; 
+        .calendar-day:nth-child(8) {
+            animation-delay: 0.1s;
+        }
+
+        .calendar-day:nth-child(9) {
+            animation-delay: 0.15s;
+        }
+
+        .calendar-day:nth-child(10) {
+            animation-delay: 0.2s;
+        }
+
+        .calendar-day:nth-child(11) {
+            animation-delay: 0.25s;
+        }
+
+        .calendar-day:nth-child(12) {
+            animation-delay: 0.3s;
+        }
+
+        .calendar-day:nth-child(13) {
+            animation-delay: 0.35s;
+        }
+
+        .calendar-day:nth-child(14) {
+            animation-delay: 0.4s;
+        }
+
+        .calendar-day:nth-child(15) {
+            animation-delay: 0.45s;
+        }
+
+        .calendar-day:nth-child(16) {
+            animation-delay: 0.5s;
+        }
+
+        .calendar-day:nth-child(17) {
+            animation-delay: 0.55s;
+        }
+
+        .calendar-day:nth-child(18) {
+            animation-delay: 0.6s;
+        }
+
+        .calendar-day:nth-child(19) {
+            animation-delay: 0.65s;
+        }
+
+        .calendar-day:nth-child(20) {
+            animation-delay: 0.7s;
+        }
+
+        .calendar-day:nth-child(21) {
+            animation-delay: 0.75s;
+        }
+
+        .calendar-day:nth-child(22) {
+            animation-delay: 0.8s;
+        }
+
+        .calendar-day:nth-child(23) {
+            animation-delay: 0.85s;
+        }
+
+        .calendar-day:nth-child(24) {
+            animation-delay: 0.9s;
+        }
+
+        .calendar-day:nth-child(25) {
+            animation-delay: 0.95s;
+        }
+
+        .calendar-day:nth-child(26) {
+            animation-delay: 1.0s;
+        }
+
+        .calendar-day:nth-child(27) {
+            animation-delay: 1.05s;
+        }
+
+        .calendar-day:nth-child(28) {
+            animation-delay: 1.1s;
+        }
+
+        .calendar-day:nth-child(29) {
+            animation-delay: 1.15s;
+        }
+
+        .calendar-day:nth-child(30) {
+            animation-delay: 1.2s;
+        }
+
+        .calendar-day:nth-child(31) {
+            animation-delay: 1.25s;
+        }
+
+        .calendar-day:nth-child(32) {
+            animation-delay: 1.3s;
+        }
+
+        .calendar-day:nth-child(33) {
+            animation-delay: 1.35s;
+        }
+
+        .calendar-day:nth-child(34) {
+            animation-delay: 1.4s;
+        }
+
+        .calendar-day:nth-child(35) {
+            animation-delay: 1.45s;
+        }
+
+        .calendar-day:nth-child(36) {
+            animation-delay: 1.5s;
+        }
+
+        .calendar-day:nth-child(37) {
+            animation-delay: 1.55s;
             animation-name: slideUpCalendarHighlight;
             animation-duration: 0.8s;
         }
@@ -1429,7 +1512,7 @@
             transform: scale(1.1);
             border: 2px solid #c20b0b;
             animation: slideUpCalendarHighlight 0.8s ease-out forwards,
-                       heartBeat 2s ease-in-out infinite 3s;
+                heartBeat 2s ease-in-out infinite 3s;
             position: relative;
         }
 
@@ -1459,6 +1542,7 @@
                 opacity: 0;
                 transform: translateY(20px);
             }
+
             to {
                 opacity: 1;
                 transform: translateY(0);
@@ -1470,9 +1554,11 @@
                 opacity: 0;
                 transform: translateY(25px) scale(0.8);
             }
+
             70% {
                 transform: translateY(-5px) scale(1.15);
             }
+
             100% {
                 opacity: 1;
                 transform: translateY(0) scale(1.1);
@@ -1480,42 +1566,56 @@
         }
 
         @keyframes gentlePulse {
-            0%, 100% {
+
+            0%,
+            100% {
                 transform: scale(1);
             }
+
             50% {
                 transform: scale(1.02);
             }
         }
 
         @keyframes floatGentle {
-            0%, 100% {
+
+            0%,
+            100% {
                 transform: translateY(0);
             }
+
             50% {
                 transform: translateY(-3px);
             }
         }
 
         @keyframes heartBeat {
-            0%, 100% {
+
+            0%,
+            100% {
                 transform: scale(1.1);
             }
+
             25% {
                 transform: scale(1.15);
             }
+
             50% {
                 transform: scale(1.1);
             }
+
             75% {
                 transform: scale(1.13);
             }
         }
 
         @keyframes glowPulse {
-            0%, 100% {
+
+            0%,
+            100% {
                 opacity: 0;
             }
+
             50% {
                 opacity: 0.3;
             }
@@ -1634,13 +1734,13 @@
             transition-delay: 0.8s;
         }
 
-    /* 项目1 (09:00 婚礼) - 左侧 */
+        /* 项目1 (09:00 婚礼) - 左侧 */
         .timeline-item:nth-child(2).animate-item {
             justify-content: flex-start;
             padding-right: 25%;
         }
 
-    /* 项目2 (10:30 迎宾) - 右侧，跨过时间线 */
+        /* 项目2 (10:30 迎宾) - 右侧，跨过时间线 */
         .timeline-item:nth-child(3).animate-item {
             justify-content: flex-end;
             flex-direction: row-reverse;
@@ -1651,13 +1751,13 @@
             margin-left: 20px;
         }
 
-    /* 项目3 (11:00 开席) - 左侧 */
+        /* 项目3 (11:00 开席) - 左侧 */
         .timeline-item:nth-child(4).animate-item {
             justify-content: flex-start;
             padding-right: 25%;
         }
 
-    /* 项目4 (11:30 婚宴) - 右侧，跨过时间线 */
+        /* 项目4 (11:30 婚宴) - 右侧，跨过时间线 */
         .timeline-item:nth-child(5).animate-item {
             justify-content: flex-end;
             flex-direction: row-reverse;
@@ -1719,7 +1819,7 @@
             z-index: 0;
         }
 
-        .rsvp-section > * {
+        .rsvp-section>* {
             position: relative;
             z-index: 1;
         }
@@ -1732,7 +1832,7 @@
             letter-spacing: 2px;
             text-align: center;
             margin-bottom: 8px;
-            text-shadow: 2px 2px 4px rgba(0,0,0,0.1);
+            text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.1);
         }
 
         .rsvp-subtitle {
@@ -1829,7 +1929,7 @@
             left: -100%;
             width: 100%;
             height: 100%;
-            background: linear-gradient(90deg, transparent, rgba(255,255,255,0.2), transparent);
+            background: linear-gradient(90deg, transparent, rgba(255, 255, 255, 0.2), transparent);
             transition: left 0.5s;
         }
 
@@ -1853,22 +1953,22 @@
                 padding: 30px 20px;
                 margin: 40px 0;
             }
-            
+
             .rsvp-title {
                 font-size: 28px;
             }
-            
+
             .rsvp-subtitle {
                 font-size: 20px;
             }
-            
+
             .form-row input,
             .form-row select,
             .form-row textarea {
                 padding: 14px 16px;
                 font-size: 15px;
             }
-            
+
             .form-row button {
                 padding: 16px 18px;
                 font-size: 16px;
@@ -2112,12 +2212,15 @@
                 transform: translateY(-100px) scale(0.5) rotate(0deg);
                 opacity: 0;
             }
+
             10% {
                 opacity: 1;
             }
+
             90% {
                 opacity: 1;
             }
+
             100% {
                 transform: translateY(100vh) scale(1.1) rotate(360deg);
                 opacity: 0;
@@ -2125,12 +2228,16 @@
         }
 
         @keyframes snowflakes-shake {
-            0%, 100% {
+
+            0%,
+            100% {
                 transform: translateX(0px);
             }
+
             25% {
                 transform: translateX(15px);
             }
+
             75% {
                 transform: translateX(-15px);
             }
@@ -2420,7 +2527,7 @@
 
             .timeline-item,
             .timeline-item:nth-child(even) {
-                flex-direction: column ;
+                flex-direction: column;
                 justify-content: center !;
             }
 
@@ -3306,8 +3413,10 @@
                             margin: 0px;
                         }
                     </style>
-                    <div class="thongtin" style="display: flex;  gap: 12px; justify-content: space-between; align-items: flex-start;">
-                        <div class="nhagai" style="width: 45%; min-width:220px; display:flex; flex-direction:column; gap:6px;">
+                    <div class="thongtin"
+                        style="display: flex;  gap: 12px; justify-content: space-between; align-items: flex-start;">
+                        <div class="nhagai"
+                            style="width: 45%; min-width:220px; display:flex; flex-direction:column; gap:6px;">
                             <p><b class="venue">女家：</b></p>
                             <p>先生: 山登</p>
                             <p>夫人: 林氏碧云</p>
@@ -3328,35 +3437,75 @@
                     <div style="text-align:center; margin:14px 0;">
                         <div style="font-weight:600;">婚礼将于女家府上举行</div>
                         <div style="margin-top:1px; font-size: 25px;">公历2025年11月30日（星期日） <br>
-                             上午11时整</div>
+                            上午11时整
+                            <style>
+                                .clock-pulse {
+                                    display: inline-block;
+                                    font-size: 20px;
+                                    color: #e74c3c;
+                                    filter: drop-shadow(0 0 8px rgba(231, 76, 60, 0.6));
+                                    animation: pulse 0.8s ease-in-out infinite;
+                                }
+
+                                @keyframes pulse {
+
+                                    0%,
+                                    100% {
+                                        transform: scale(1);
+                                    }
+
+                                    50% {
+                                        transform: scale(1.4);
+                                    }
+                                }
+                            </style>
+
+                            <span class="clock-pulse">⏱</span>
+                        </div>
                     </div>
 
                     <div class="date-display" style="color: rgb(194, 14, 14); margin-bottom: 3px; text-align:center;">
-                        <span class="date-num" style="color: rgb(194, 14, 14); margin-bottom: 3px; font-size:28px;">30</span>
+                        <span class="date-num"
+                            style="color: rgb(194, 14, 14); margin-bottom: 3px; font-size:28px;">30</span>
                         <div class="date-divider" style="display:inline-block; width:2px;"></div>
-                        <span class="date-num" style="color: rgb(194, 14, 14); margin-bottom: 3px; font-size:28px;">11</span>
+                        <span class="date-num"
+                            style="color: rgb(194, 14, 14); margin-bottom: 3px; font-size:28px;">11</span>
                         <div class="date-divider" style="display:inline-block; width:2px;"></div>
-                        <span class="date-num" style="color: rgb(194, 14, 14); margin-bottom: 3px; font-size:18px;">2025</span>
+                        <span class="date-num"
+                            style="color: rgb(194, 14, 14); margin-bottom: 3px; font-size:18px;">2025</span>
                     </div>
 
                     <div class="couple-and" style="margin-top:8px;">
                         <div style="display:flex; flex-direction:column; align-items:center; gap:6px;">
-                            <div style="font-family: 'Dancing Script', cursive; font-size:24px; color:rgb(194,14,14); font-weight:600;">山氏碧簪</div>
-                            <span class="mini-heart-icon" style="margin:8px 0;"><img src="https://cdn-resource.cinelove.me/resources/happiness/m2v6vni968nbrqikk3xawv.png" alt="♥" style="width:26px;height:26px;"></span>
-                            <div style="font-family: 'Dancing Script', cursive; font-size:24px; color:rgb(194,14,14); font-weight:600;">潘桂煌</div>
+                            <div
+                                style="font-family: 'Dancing Script', cursive; font-size:24px; color:rgb(194,14,14); font-weight:600;">
+                                山氏碧簪</div>
+                            <span class="mini-heart-icon" style="margin:8px 0;"><img
+                                    src="https://cdn-resource.cinelove.me/resources/happiness/m2v6vni968nbrqikk3xawv.png"
+                                    alt="♥" style="width:26px;height:26px;"></span>
+                            <div
+                                style="font-family: 'Dancing Script', cursive; font-size:24px; color:rgb(194,14,14); font-weight:600;">
+                                潘桂煌</div>
                         </div>
                     </div>
 
-                    <h3 style="font-family: 'Crimson Text', 'Georgia', serif; font-size:18px; color: rgb(194, 14, 14); text-align: center; margin: 16px 0 8px 0; font-style: italic;">～ 恭请光临 ～</h3>
+                    <h3
+                        style="font-family: 'Crimson Text', 'Georgia', serif; font-size:18px; color: rgb(194, 14, 14); text-align: center; margin: 16px 0 8px 0; font-style: italic;">
+                        ～ 恭请光临 ～</h3>
 
-                    <div class="address-info" style="font-family: 'Crimson Text', 'Times New Roman', serif; font-size:16px; color: rgb(94, 20, 20); text-align: center; line-height:1.6; margin:8px 0;">
+                    <div class="address-info"
+                        style="font-family: 'Crimson Text', 'Times New Roman', serif; font-size:16px; color: rgb(94, 20, 20); text-align: center; line-height:1.6; margin:8px 0;">
                         <strong style="color: rgb(194, 14, 14); font-size:17px;">地址：</strong><br>
                         越南 芹苴市 安宁社 Giồng Chùa A ấp
                     </div>
 
-                    <div class="invitation-text" style="font-family: 'Crimson Text', 'Times New Roman', serif; font-size:15px; color: rgb(64, 8, 8); text-align: center; line-height:1.7; margin:12px 0; padding:12px; border-radius:8px;">
+                    <div class="invitation-text"
+                        style="font-family: 'Crimson Text', 'Times New Roman', serif; font-size:15px; color: rgb(64, 8, 8); text-align: center; line-height:1.7; margin:12px 0; padding:12px; border-radius:8px;">
                         <div style="font-weight:600;">诚邀您出席婚宴，共襄盛举：</div>
-                        <div style="margin-top:8px;">时间：2025年11月30日（星期日）上午11时整</div>
+                        <div style="margin-top:8px;">时间：2025年11月30日（星期日）上午11时整
+
+                            
+                        </div>
                         <div style="margin-top:6px; font-style:italic;">（农历乙巳年十月十一日）</div>
                         <p style="margin-top:12px;">您的光临是我们全家的荣幸！</p>
                         <div style="font-weight:700; margin-top:6px;">敬请光临</div>
@@ -4138,7 +4287,9 @@
         <!-- Map -->
         <div class="section map-section">
             <h2 class="map-title" style="color: #7a1f1f;">/ 地址 /</h2>
-            <p style="animation-timing-function: calc();">点击 <a  href="https://www.google.com/maps/place/10%C2%B036'55.0%22N+37%C2%B042'55.0%22E/@10.615278,37.715278,15z/data=!4m2!3m1!1s0x0:0x0" target="_blank">查看地图</a></p>
+            <p style="animation-timing-function: calc();">点击 <a
+                    href="https://www.google.com/maps/place/10%C2%B036'55.0%22N+37%C2%B042'55.0%22E/@10.615278,37.715278,15z/data=!4m2!3m1!1s0x0:0x0"
+                    target="_blank">查看地图</a></p>
             <div class="map-container">
                 <iframe
                     src="https://www.google.com/maps/embed?pb=!1m17!1m12!1m3!1d3477.59659337964!2d105.92457197502662!3d9.64485449044316!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m2!1m1!2zOcKwMzgnNDEuNSJOIDEwNcKwNTUnMzcuNyJF!5e1!3m2!1svi!2s!4v1762442252118!5m2!1svi!2s"
@@ -4564,7 +4715,7 @@
         </section>
         <!-- Timeline -->
         <div class="section timeline-section">
-            <h2 class="timeline-title venue" >时间线</h2>
+            <h2 class="timeline-title venue">时间线</h2>
             <p class="timeline-subtitle venue">婚礼流程</p>
 
             <div class="timeline-items">
@@ -4653,8 +4804,7 @@
 
                 <div class="form-row">
                     <label for="message">祝福语</label>
-                    <textarea id="message" name="message" rows="3"
-                        placeholder="向新人送上祝福..."></textarea>
+                    <textarea id="message" name="message" rows="3" placeholder="向新人送上祝福..."></textarea>
                 </div>
 
                 <div class="form-row">
@@ -4681,7 +4831,8 @@
             <button class="close-btn" onclick="closeThankYouModal()">✕</button>
 
             <img class="thank-you-image"
-                src="https://res.cloudinary.com/devdnfoyh/image/upload/v1762071611/efa97aeaab4f26117f5e15_hd5agp.jpg" alt="Thank You" style=" width: 80%; height: auto;">
+                src="https://res.cloudinary.com/devdnfoyh/image/upload/v1762071611/efa97aeaab4f26117f5e15_hd5agp.jpg"
+                alt="Thank You" style=" width: 80%; height: auto;">
 
             <h2>感谢您！</h2>
 
@@ -5232,7 +5383,7 @@
         })();
 
         // Timeline Sequential Animation
-        (function() {
+        (function () {
             const timelineSection = document.querySelector('.timeline-section');
             if (!timelineSection) return;
 
@@ -5253,7 +5404,8 @@
                         timelineItems.forEach((item, index) => {
                             setTimeout(() => {
                                 item.classList.add('animate-item');
-                            }, 400 + (index * 200)); // Start after line animation, then 200ms apart
+                            }, 400 + (index *
+                                200)); // Start after line animation, then 200ms apart
                         });
 
                         timelineObserver.unobserve(entry.target);
